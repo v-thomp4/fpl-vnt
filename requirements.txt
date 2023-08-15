@@ -1,0 +1,6 @@
+flask
+bs4
+requests
+gunicorn
+sentry-sdk[flask]==0.10.2
+redis

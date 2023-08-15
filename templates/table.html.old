@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+</body>
+<table id="data" class="table table-bordered table-responsive table-hover">
+    <thead style="background-color: #F2F2F2">
+        <tr>
+            <td>Rank</td>
+            <td>Team & Manager</td>
+            <td>Score</td>
+            <td>Played</td>
+        </tr>
+    </thead>
+    <tbody style="background-color: #fff">
+        {% for dict_item in vnt_list %}
+        <tr>
+            <td>{{ dict_item.table }}</td>
+            <td>
+                <p style="color:#e90052;">{{ dict_item.name }}</p>
+                <small>{{ dict_item.cap }}</small>
+            </td>
+            <td style="color:#e90052;" data-toggle="tooltip" data-placement="left" data-html="true" align='left' title= "{{ dict_item.team }}">
+                <p>{{ dict_item.point }}</p>
+            </td>
+            <td>
+                <small>{{ dict_item.n_played}}/{{ dict_item.t_played }}</small>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    <thead style="background-color: #F2F2F2">
+        <tr>
+            <td>Rank</td>
+            <td>Team & Manager</td>
+            <td>Score</td>
+            <td>Played</td>
+        </tr>
+    </thead>
+    <tbody style="background-color: #fff">
+        {% for dict_item in user_list %}
+        <tr>
+            <td>{{ dict_item.table }}</td>
+            <td style="color:rgb(55 0 60);">
+              <p>{{ dict_item.name }}</p>
+              <small>{{ dict_item.captain }}</small> - <small style="color:#676C72;">{{ dict_item.vice_cap }}</small>
+            </td>
+            <td style="color:rgb(55 0 60);" data-toggle="tooltip" data-placement="left" data-html="true" align='left' title= "{{ dict_item.played_list }}">
+              <p>{{ dict_item.point }}</p>
+              {% if dict_item.hit != "0" %}
+                <small style="color:#676C72;">{{ dict_item.hit }}p</small>
+              {% endif %}
+            </td>
+            <td style="color:rgb(55 0 60);" data-toggle="tooltip" data-placement="left" data-html="true" align='left' title= "{{ dict_item.transfers_list }}">
+                <p><small>{{ dict_item.played}}</small></p>
+                <small style="color:#676C72;">{{ dict_item.chip }}</small>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="table-sub">
+    *Live Autosubs: <button>{{ result }}</button>
+</div>
+{% endblock %}

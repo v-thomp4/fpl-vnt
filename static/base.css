@@ -1,0 +1,48 @@
+.table {
+  margin: auto;
+  max-width: 780px;
+}
+.table-sub {
+  margin: auto;
+  max-width: 780px;
+}
+.tooltip {
+  width: auto;
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: right;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: normal;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  line-break: auto;
+}
+
+.tooltip-inner {
+  text-align: right!important;
+}
+.inline {
+  color: #FF8080;
+}
+.inline-played {
+  color: #80C0FF;
+}
+.inline-nplayed {
+  color: white;
+}
+.inline-captain {
+  color: orange;
+}
